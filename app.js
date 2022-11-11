@@ -1,11 +1,13 @@
 let array = [2,5,9,12,6,8];
 
-let position =3;
+let item = 6;
 
-for (let i = position; i < array.length-1; i++) {
-    array[i]=array[i+1]
-    
+for (let i = 0; i < array.length; i++) {
+    if (array[i]===item) {
+        console.log(i);
+        break;
+    } 
 }
 
-array.length = array.length-1;
-console.log(array);
+//js defaullt function
+//console.log(array.indexOf(item));
