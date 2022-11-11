@@ -29,6 +29,3 @@ while (n2<data2.length) {
 console.log(data3);
 
 
-//js defaullt function
-//
-//console.log(data);
