@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-
-    <script>
 
 
 let array = [2,5,9,12,6,9,8];
@@ -38,6 +26,3 @@ for (let i = array.length-1;i>0; i--) {
 console.log(array);
 
 
-    </script>
-</body>
-</html>
