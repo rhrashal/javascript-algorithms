@@ -1,25 +1,41 @@
 
 
-//Direct & Indirect Recursion Example
+let data = [];
+let crrentSize = data.length;
+let mx=4;
 
-//Indirect Recursion 
-function apple(x){
-   console.log(x+" apple");
-   if (x<10) {
-      banana(x+1);
-   }
- 
+function push(val){
+   if(crrentSize>mx){
+      console.log("dat- "+val)
+   }else{
+      data[crrentSize]=val;
+      crrentSize+=1;
+   }   
 }
-function banana(x){
-   console.log(x+" banana");
-   if (x<10) {
-      apple(x+1);
+
+function pop(){
+   if(crrentSize>0){
+      crrentSize-=1;
+      data.length=crrentSize;
+   }else{
+      console.log("dat- "+val)
    }
 }
-apple(0);
 
 
 
+push(5);
+push(9);
+push(0);
+push(3);
+push(2);
+push(1);
+
+console.log(data);
+pop();
+
+
+console.log(data);
 //js defaullt function
-//
+
 //console.log(data);
