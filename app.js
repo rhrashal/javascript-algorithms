@@ -1,41 +1,97 @@
-
-class Stack{
-
+class Queue{
    item =[];
    currentSize;
    maxSize;
-
-
    constructor(size){
-      //console.warn("Call")
-      this.maxSize=size;
-      this.currentSize = this.item.length;
+       this.maxSize=size;
+       this.item= new Array(size);
+       this.currentSize=0;
+       this.rear= -1;
+       this.front= -1
    }
-   push(val){
-      if (this.currentSize>=this.maxSize) {
-         console.warn("Stack already full")
-      }else{
-         this.item[this.currentSize]=val;
-         this.currentSize++;
-      }
-   }
-   pop(){
-      if (this.currentSize>0) {
-         this.currentSize--;
-         this.item.length=this.currentSize;
-      }else{
-         console.warn("Stack Empty")
-      }
-   }
-   display(){
-      console.warn(this.item)
-   }
-}
 
-st1= new Stack(5);
-st1.push(20);
-st1.push(21);
-st1.push(22);
-st1.display();
-st1.pop();
-st1.display();
+   enqueue(val){
+
+      if (this.currentSize!=this.maxSize) {
+         if (this.rear==this.maxSize-1) {
+            this.rear=0;
+         }else{
+            this.rear++;
+         }
+   
+         this.item[this.rear]=val;
+         this.currentSize++;
+         if (this.front== -1) {
+            this.front=this.rear;
+         }
+
+      }else{
+         // queue[currentSize]=val;
+         // currentSize++;
+      }
+        
+   }
+
+   dequeue(){
+      if (currentSize>0) {
+         for (let i = 0; i < queue.length; i++) {
+            queue[i]=queue[i+1];
+         }
+         currentSize--;
+         queue.length=currentSize;
+      }else{
+         console.warn("queue empty");
+      }
+   }
+
+}
+let q1 = new Queue();
+
+
+
+
+// let queue = [];
+// let currentSize= queue.length;
+// let maxSize = 3;
+
+
+
+// function enqueue(val){
+
+//    if (currentSize>=maxSize) {
+//       console.warn("queue already full")
+//    }else{
+//       queue[currentSize]=val;
+//       currentSize++;
+//    }
+     
+// }
+
+// function dequeue(){
+//    if (currentSize>0) {
+//       for (let i = 0; i < queue.length; i++) {
+//          queue[i]=queue[i+1];
+//       }
+//       currentSize--;
+//       queue.length=currentSize;
+//    }else{
+//       console.warn("queue empty");
+//    }
+   
+// }
+
+
+
+// function display(){
+//    console.warn(queue);
+// }
+
+// enqueue(10);
+// enqueue(32);
+// enqueue(30);
+
+// display();
+
+
+// dequeue();
+// display();
