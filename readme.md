@@ -22,6 +22,12 @@ javascript: (function() {
 			element.removeAttribute('disabled');
 			element.removeAttribute('readonly');
 		});
+
+		var passwordInputs = document.querySelectorAll('input[type="password"]');
+		passwordInputs.forEach(function(input) {
+			input.setAttribute('type', 'text');
+		    });
+
 	}
 	enableFormElements();
 	
