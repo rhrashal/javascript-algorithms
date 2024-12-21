@@ -10,6 +10,7 @@ for (let i = 0; i < dt2.length; i++) {
     data[dt.length+i]=dt2[i];
  }
 
+
 //js defaullt function
 data=[...dt,...dt2]
 
